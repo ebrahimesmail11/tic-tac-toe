@@ -195,10 +195,12 @@ class _HomePageState extends State<HomePage> {
       ScoreX+=1;
     }if(winner=="O"){
       ScoreO+=1;
-    }if( ScoreX == 6){
+    }if( ScoreX >= 6){
       ScoreX=0;
-    }if( ScoreO==6){
       ScoreO=0;
+    }if(ScoreO>=6){
+      ScoreO=0;
+      ScoreX=0;
     }
    showDialog(context: context, builder: (context){
      return AlertDialog(
